@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script>
+        // JavaScript function to display current date and time
+        function displayDateTime() {
+            // Create a new Date object
+            var currentDateTime = new Date();
+
+            // Extract the date components
+            var day = currentDateTime.getDate();
+            var month = currentDateTime.getMonth() + 1; // Months are zero-based
+            var year = currentDateTime.getFullYear();
+
+            // Extract the time components
+            var hours = currentDateTime.getHours();
+            var minutes = currentDateTime.getMinutes();
+            var seconds = currentDateTime.getSeconds();
+
+            // Format the date as DD-MM-YYYY
+            var dateString = day + '-' + month + '-' + year;
+
+            // Format the time as HH:MM:SS
+            var timeString = hours + ':' + minutes + ':' + seconds;
+
+            // Update the content of the elements with the current date and time
+            document.getElementById('currentDate').innerHTML = dateString;
+            document.getElementById('currentTime').innerHTML = timeString;
+        }
+        
+        // Call the displayDateTime function when the page loads
+        window.onload = displayDateTime;
+    </script>
+    
+</head>
+<body align="center">
+Login Successful<br>
+Date: <span id="currentDate"></span><br>
+Time: <span id="currentTime"></span><br><br>
+<a href="/signin"><button>Sign in</button></a>
+<br><br><br>
+<a href="/viewreport"><button>View Report</button></a>
+</body>
+</html>
